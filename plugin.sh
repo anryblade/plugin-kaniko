@@ -113,6 +113,7 @@ fi
 if [ -n "${PLUGIN_MIRRORS:-}" ]; then
     MIRROR="$(echo "${PLUGIN_MIRRORS}" | tr ',' '\n' | while read -r mirror; do echo "--registry-mirror=${mirror}"; done)"
 fi
+
 if [ -z "${PLUGIN_REGISTRY:-}" ]; then 
 REGISTRY=$(echo $REGISTRY | awk -F[/:] '{print $4}')
 fi
