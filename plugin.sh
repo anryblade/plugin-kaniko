@@ -115,7 +115,7 @@ if [ -n "${PLUGIN_MIRRORS:-}" ]; then
 fi
 
 if [ -z "${PLUGIN_REGISTRY:-}" ]; then 
-REGISTRY=$(echo $REGISTRY | awk -F[/:] '{print $4}')
+    REGISTRY=$(echo $REGISTRY | awk -F[/:] '{print $4}')
 fi
 
 DESTINATIONS=""
